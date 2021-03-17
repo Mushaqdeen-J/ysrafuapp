@@ -1,0 +1,7 @@
+{
+  "name": "ysrafu",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
