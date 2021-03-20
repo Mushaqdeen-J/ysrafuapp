@@ -24,3 +24,13 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+
+.table {
+    width: 100%;
+}
+
+table.table th, table.table td {
+    text-align: left;
+    border: 1px solid #dddddd;
+    padding: 5px;
+}

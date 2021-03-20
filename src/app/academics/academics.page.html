@@ -15,6 +15,440 @@
   </ion-header>
 
   <div id="container">
-    
+    <ion-segment [(ngModel)]="segment" scrollable="true">
+      <ion-segment-button value="school">
+        <ion-label>School of Planning and architecture</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="college">
+        <ion-label>College of Fine Arts (CFA)</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="calendar">
+        <ion-label>Academic Calendar</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="faculty">
+        <ion-label>Faculty</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="library">
+        <ion-label>Library</ion-label>
+      </ion-segment-button>
+      <!--<ion-segment-button value="research">
+        <ion-label>Research</ion-label>
+      </ion-segment-button>-->
+    </ion-segment>
+    <div *ngIf="segment == 'school'">
+      <ion-title>Under Graduate</ion-title>
+      <ion-card button>
+        <img src="../assets/academic/Architecture.jpg" alt="ysrafu" />
+      </ion-card>
+      <ion-card button>
+        <img src="../assets/academic/interior-design.jpg" alt="ysrafu" />
+      </ion-card>
+      <ion-card button>
+        <img src="../assets/academic/DTDP.jpg" alt="ysrafu" />
+      </ion-card>
+      <ion-card button>
+        <img src="../assets/academic/FSP.jpg" alt="ysrafu" />
+      </ion-card>
+      <ion-card button>
+        <img src="../assets/academic/Planning.jpg" alt="ysrafu" />
+      </ion-card>
+      <ion-title>Post Graduate</ion-title>
+      <ion-card button>
+        <img src="../assets/academic/march-1.png" alt="ysrafu" />
+      </ion-card>
+      <ion-card button>
+        <img src="../assets/academic/Mplan.png" alt="ysrafu" />
+      </ion-card>
+    </div>
+    <div *ngIf="segment == 'college'">
+      <ion-title>Under Graduate</ion-title>
+      <ion-card button>
+        <img src="../assets/academic/Painting.jpg" alt="ysrafu" />
+      </ion-card>
+      <ion-card button>
+        <img src="../assets/academic/Sculpture.jpg" alt="ysrafu" />
+      </ion-card>
+      <ion-card button>
+        <img src="../assets/academic/AppliedArt.jpg" alt="ysrafu" />
+      </ion-card>
+      <ion-card button>
+        <img src="../assets/academic/Photography.jpg" alt="ysrafu" />
+      </ion-card>
+      <ion-card button>
+        <img src="../assets/academic/Animation.jpg" alt="ysrafu" />
+      </ion-card>
+      <ion-title>Post Graduate</ion-title>
+      <ion-card button>
+        <img src="../assets/academic/MFAAplliedArt.jpg" alt="ysrafu" />
+      </ion-card>
+      <ion-card button>
+        <img src="../assets/academic/MFAPainting.jpg" alt="ysrafu" />
+      </ion-card>
+    </div>
+    <div *ngIf="segment == 'calendar'">
+      <ion-card>
+        <ion-card-header>
+          <ion-card-subtitle>As per University Grants Commission (UGC), The academic calendar for the first year
+            students commence from 01.11.2020 for first year students. Accordingly, the following</ion-card-subtitle>
+        </ion-card-header>
+        <ion-card-content>
+          <p>Calendar is suggested for the academic session 2020-2021</p>
+          <table class="table">
+            <tr>
+              <th>Admission Process(To be completed)</th>
+              <td>31.10.2020</td>
+            </tr>
+            <tr>
+              <th>Commencement of Classes of above students Fresh batch (First Semester / Year)</th>
+              <td>01.11.2020<sup>*</sup></td>
+            </tr>
+            <tr>
+              <th>Preoaratorv Break</th>
+              <td>01.03.2021 to 07.03.2021</td>
+            </tr>
+            <tr>
+              <th>Conduct of Examinations</th>
+              <td>08.03.2021 to 26.03.2021</td>
+            </tr>
+            <tr>
+              <th>Semester Break</th>
+              <td>27.03.2021 to 04.04.2021</td>
+            </tr>
+            <tr>
+              <th>Commencement of Classes for Even Semester</th>
+              <td>5.04.2021</td>
+            </tr>
+            <tr>
+              <th>Preparatory Break</th>
+              <td>01.08.2021 to 08.08.2021</td>
+            </tr>
+            <tr>
+              <th>Conduct of Examinations</th>
+              <td>09.08.2021 to 21.08.2021</td>
+            </tr>
+            <tr>
+              <th>Semester Break</th>
+              <td>22.08.2021 to 29.08.2021</td>
+            </tr>
+            <tr>
+              <th>Commencement of Next Academic Session for this batch</th>
+              <td>30.08.2021</td>
+            </tr>
+          </table>
+        </ion-card-content>
+      </ion-card>
+    </div>
+    <div *ngIf="segment == 'faculty'">
+      <ion-title>College of Fine Arts (CFA)</ion-title>
+      <ion-card>
+        <img src="./assets/facult/mrutyunjaya.png" alt="" />
+        <ion-card-header>
+          <ion-card-subtitle>Assistant Professor in Painting</ion-card-subtitle>
+          <ion-card-title>Dr. Kota Mrutyunjaya Rao MFA., Ph.D</ion-card-title>
+        </ion-card-header>
+      </ion-card>
+    </div>
+    <div *ngIf="segment == 'library'">
+      <ion-card>
+        <ion-card-content>
+          <p>The aim of the library is to provide the right environment and appropriate facilities and services to
+            support high quality learning.</p>
+          <br />
+          <p>Dr. YSR Architecture and Fine Arts University's Library is the soul of the University. It is designed to
+            acquire, preserves and disseminate information to the user community with the motto of empowering knowledge.
+            It has an extensive collection of books, reference materials for satisfying the academic and research needs
+            of the students and faculty. The Library consists of a Reference Section, Circulation Section, and
+            Periodical Section with fully automated library activities to provide effective and wide range of academic
+            resources such as books, journals and online databases. The University always encourages students and
+            faculty to recommend new books in order to strengthen their collection.</p>
+          <br />
+          <p>The library provides a useful collection of learning materials, access to computerized information sources
+            and audio/visual learning facilities.</p>
+          <ion-list>
+            <ion-item>
+              <ion-label>i) Reference Service & Assistance</ion-label>
+            </ion-item>
+            <ion-item>
+              <ion-label>ii) Photocopy Services</ion-label>
+            </ion-item>
+            <ion-item>
+              <ion-label>iii) Multimedia Resources</ion-label>
+            </ion-item>
+            <ion-item>
+              <ion-label>iv) On-line Databases</ion-label>
+            </ion-item>
+          </ion-list>
+          <p>The Library will be fully automated and students can search the books online with the preferences of
+            Authors and book titles. They can Log in to the Library web page with the Students unique ID and mark the
+            required book for a period of not more than 7 days. After marking the book for the required dates, the
+            students should be present physically and lease out the book with their Identity.</p>
+          <br />
+          <ion-title class="ion-no-padding">Working Hours</ion-title>
+          <p>Students can access the Library from 9 am to 5 pm in weekdays. The Library will remain closed on Sundays
+            and holidays.</p>
+          <ion-title class="ion-no-padding">SPA Library</ion-title>
+          <p>The School of Planning and Architecture library is a place where versatile collection of Architectural,
+            Planning, designing and other sources of Technological information are stored. They make it easier for
+            students and staff members to get access to them for attaining knowledge with different sources of
+            materials. These include books, magazines, newspapers, DVDs, manuscripts and more.</p>
+          <br />
+          <p>Our holdings specialize in modern and contemporary architecture and design, the history and theory of
+            architecture, urban studies, landscape architecture, preservation, and city planning. The collection
+            constitutes approximately 10,000 volumes. The library is designed to subscribe to more than 1000 domestic
+            and foreign periodicals, publications and has a growing collection of rare materials as well as a video
+            collection. The video collection focuses broadly on Architectural Designs, Techniques, Planning and
+            Implementation</p>
+          <ion-title class="ion-no-padding">CFA Library</ion-title>
+          <p>The Fine Arts Library is a key resource that provides facilities for individual study, research and a
+            collection of materials. The library's collection comprises approximately 10000 literacy including books,
+            journals, exhibition catalogues and visual media. Our collection includes history of the arts with a
+            particular focus on modern and contemporary artists and movements. The collection includes books, magazines,
+            newspapers, DVDs, Journals, etc.</p>
+          <br />
+          <p>Our Collection of books mainly consists of works on Applied Art, Sculpture's, Painting, Animation and
+            Photography. There is lot of research materials available in both print and Audio-Visual form. The students
+            will have access to a variety of collections from the History to the latest technology used in the field of
+            art.</p>
+          <ion-title class="ion-no-padding">Internet Facility</ion-title>
+          <p>Students can also use computer systems with Internet facility to study online and can mail the material to
+            their respective email id's. All types of external storage devices need to be strictly avoided in the
+            Library premises and if found will be seized by the Library administration.</p>
+          <ion-title class="ion-no-padding">Membership fee</ion-title>
+          <p>The following persons belonging to the University are eligible for lending the books. The mandatory deposit
+            amount, issue of books limit and duration of the lease will be as follows:</p>
+          <br />
+          <table class="table">
+            <tr>
+              <th>Description</th>
+              <th>Deposit PA</th>
+              <th>No. of books that can be borrowed</th>
+              <th>No. of days that can be borrowed</th>
+            </tr>
+            <tr>
+              <td class="ion-text-center">Professors</td>
+              <td class="ion-text-center">-</td>
+              <td class="ion-text-center">2</td>
+              <td class="ion-text-center">20</td>
+            </tr>
+            <tr>
+              <td class="ion-text-center">Associate Professors</td>
+              <td class="ion-text-center">-</td>
+              <td class="ion-text-center">1</td>
+              <td class="ion-text-center">15</td>
+            </tr>
+            <tr>
+              <td class="ion-text-center">Assistant Professors</td>
+              <td class="ion-text-center">-</td>
+              <td class="ion-text-center">1</td>
+              <td class="ion-text-center">10</td>
+            </tr>
+            <tr>
+              <td class="ion-text-center">Academic Assistants</td>
+              <td class="ion-text-center">2000</td>
+              <td class="ion-text-center">1</td>
+              <td class="ion-text-center">7</td>
+            </tr>
+            <tr>
+              <td class="ion-text-center">Students of all courses</td>
+              <td class="ion-text-center">1500</td>
+              <td class="ion-text-center">1</td>
+              <td class="ion-text-center">7</td>
+            </tr>
+            <tr>
+              <td class="ion-text-center">Ph.D. Research Scholars (Full-Time)</td>
+              <td class="ion-text-center">1500</td>
+              <td class="ion-text-center">1</td>
+              <td class="ion-text-center">7</td>
+            </tr>
+            <tr>
+              <td class="ion-text-center">Ph.D. Research Scholars (Part-Time)</td>
+              <td class="ion-text-center">5000</td>
+              <td class="ion-text-center">1</td>
+              <td class="ion-text-center">7</td>
+            </tr>
+            <tr>
+              <td class="ion-text-center">Other Staff</td>
+              <td class="ion-text-center">5000</td>
+              <td class="ion-text-center">1</td>
+              <td class="ion-text-center">7</td>
+            </tr>
+          </table>
+          <p>Note: users must register online by submitting Library Membership Application Form.</p>
+          <br />
+          <p>The University Library & Information center offers membership to the students, Researchers, Academicians,
+            Practicing Architects, Business Industry, Entrepreneurs, Government & Corporate Organizations etc. on
+            payment of nominal service charges as given below:</p>
+          <br />
+          <table class="table">
+            <tr>
+              <th>Category of Membership</th>
+              <th colspan="7">Service Charges for</th>
+            </tr>
+            <tr>
+              <th>One Day Rs.</th>
+              <th>One Week Rs.</th>
+              <th>One Month Rs.</th>
+              <th>Three Months Rs.</th>
+              <th>Six Months Rs.</th>
+              <th>One Year Rs.</th>
+              <th colspan="2">Three Years Rs.</th>
+            </tr>
+            <tr>
+              <td colspan="8">Individual Membership</td>
+            </tr>
+            <tr>
+              <td>Students</td>
+              <td>50</td>
+              <td>200</td>
+              <td>500</td>
+              <td>1,200</td>
+              <td>2,000</td>
+              <td>3,000</td>
+              <td>8,000</td>
+            </tr>
+            <tr>
+              <td>Architects/Faculty</td>
+              <td>100</td>
+              <td>400</td>
+              <td>1.000</td>
+              <td>2,000</td>
+              <td>3,500</td>
+              <td>5,000</td>
+              <td>12,000</td>
+            </tr>
+            <tr>
+              <td colspan="8">Individual Membership(For a Maximum of 5 Members only)</td>
+            </tr>
+            <tr>
+              <td>Govt. Institutions</td>
+              <td colspan="4">10,000</td>
+              <td colspan="3">25,000</td>
+            </tr>
+          </table>
+          <ion-title class="ion-no-padding">Online Registrations</ion-title>
+          <ion-list>
+            <ion-item>
+              <ion-icon name="radio-button-on"></ion-icon>
+              <ion-label>
+                <h3>Membership Form</h3>
+              </ion-label>
+            </ion-item>
+            <ion-item>
+              <ion-icon name="radio-button-on"></ion-icon>
+              <ion-label>
+                <h3>Book Issue Form</h3>
+              </ion-label>
+            </ion-item>
+            <ion-item>
+              <ion-icon name="radio-button-on"></ion-icon>
+              <ion-label>
+                <h3>Book Recommendation Form</h3>
+              </ion-label>
+            </ion-item>
+          </ion-list>
+          <ion-title class="ion-no-padding">Rules and regulations</ion-title>
+          <ion-list>
+            <ion-item>
+              <ion-label>
+                <h3 class="ion-text-wrap">1. Always carry your Identity card to access the Library and its resources.</h3>
+              </ion-label>
+            </ion-item>
+            <ion-item>
+              <ion-label>
+                <h3 class="ion-text-wrap">2. Choose the appropriate zone for your studies. You will be asked to move or leave if your behaviour disturbs others.</h3>
+              </ion-label>
+            </ion-item>
+            <ion-item>
+              <ion-label>
+                <h3 class="ion-text-wrap">3. Only take resources out of the Library that you have borrowed. Remember to return them on time to avoid late fees.</h3>
+              </ion-label>
+            </ion-item>
+            <ion-item>
+              <ion-label>
+                <h3 class="ion-text-wrap">4. Usage of computer systems are for academic use only and must not be used for any commercial purpose.</h3>
+              </ion-label>
+            </ion-item>
+            <ion-item>
+              <ion-label>
+                <h3 class="ion-text-wrap">5. The Library is not responsible for personal items that are lost, stolen, or damaged on Library premises.</h3>
+              </ion-label>
+            </ion-item>
+            <ion-item>
+              <ion-label>
+                <h3 class="ion-text-wrap">6. Photography and recording are not allowed on Library premises without prior permission.</h3>
+              </ion-label>
+            </ion-item>
+            <ion-item>
+              <ion-label>
+                <h3 class="ion-text-wrap">7. Late fee per book will be charged @ Rs. 50 per day.</h3>
+              </ion-label>
+            </ion-item>
+            <ion-item>
+              <ion-label>
+                <h3 class="ion-text-wrap">8. If the book is lost, then it has to be replaced by the same book or double thebook amount will be charged to the borrower.</h3>
+              </ion-label>
+            </ion-item>
+            <ion-item>
+              <ion-label>
+                <h3 class="ion-text-wrap">9. No dues certificate from the librarian is mandatory while leaving the University.</h3>
+              </ion-label>
+            </ion-item>
+          </ion-list>
+        </ion-card-content>
+      </ion-card>
+    </div>
+    <div *ngIf="segment == 'research'">
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title>COLLEGE OF FINE ARTS</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <p>College of Fine arts offers Bachelor of Fine Arts (BFA) degree through five departments namely Painting,
+            Animation, Applied Art, Photography and Sculpture to develop the artistic sense of human to communicate and
+            leave footprints of this generation for the ages to come.</p>
+        </ion-card-content>
+      </ion-card>
+      <ion-card>
+        <img src="./assets/about/cfa-abt-1.png" alt="" />
+        <ion-card-content>
+          <p>The Course of Painting is designed for students to understand the creative use of drawing, oil colour,
+            water colour, ternpera and other media of painting along with figurative and non-figurative compositions.
+            They develop competence in landscape painting, life study, portraiture and mural design in different media.
+          </p>
+        </ion-card-content>
+      </ion-card>
+      <ion-card>
+        <img src="./assets/about/cfa-abt-2.png" alt="" />
+        <ion-card-content>
+          <p>The Animation program enables students to develop core domain areas for animation design and soft skills to
+            experiment with various mediums such as 2D, 3D, VFX, film making, Stop motion animation, etc,. They are
+            introduced to basic drawing and design skills required.</p>
+        </ion-card-content>
+      </ion-card>
+      <ion-card>
+        <img src="./assets/about/cfa-abt-3.png" alt="" />
+        <ion-card-content>
+          <p>The Course structure Applied Art prepares students in creative useof different media for painting and
+            compositional skills with various technical processes of print making such as etching, lithography, wood
+            cutting etc,. to apply their skills in art and craft.</p>
+        </ion-card-content>
+      </ion-card>
+      <ion-card>
+        <img src="./assets/about/cfa-abt-4.png" alt="" />
+        <ion-card-content>
+          <p>The academic programme of Photography and Visual Communications equips students with necessary skills to
+            learn Photography as Fine Art, Photo Journalism, Digital Photography, Audio-Visual Communication, Computer
+            Graphics & Multimedia with videography.</p>
+        </ion-card-content>
+      </ion-card>
+      <ion-card>
+        <img src="./assets/about/cfa-abt-5.png" alt="" />
+        <ion-card-content>
+          <p>The Course Sculpture equips students to understand moulding and casting with various mediums like Clay,
+            Cement, Plaster, Fiber, Bronze, Ceramics, Metal and Wood. They are aquainted to printmaking and painting.
+          </p>
+        </ion-card-content>
+      </ion-card>
+    </div>
   </div>
 </ion-content>
