@@ -15,6 +15,233 @@
   </ion-header>
 
   <div id="container">
-    
+    <ion-slides [options]="slideOpts">
+      <ion-slide>
+        <ion-img src="./assets/home/1.jpg" alt="banner"></ion-img>
+      </ion-slide>
+      <ion-slide>
+        <ion-img src="./assets/home/2.jpg" alt="banner"></ion-img>
+      </ion-slide>
+      <ion-slide>
+        <ion-img src="./assets/home/3.jpg" alt="banner"></ion-img>
+      </ion-slide>
+      <ion-slide>
+        <ion-img src="./assets/home/4.jpg" alt="banner"></ion-img>
+      </ion-slide>
+      <ion-slide>
+        <ion-img src="./assets/home/5.jpg" alt="banner"></ion-img>
+      </ion-slide>
+      <ion-slide>
+        <ion-img src="./assets/home/6.jpg" alt="banner"></ion-img>
+      </ion-slide>
+      <ion-slide>
+        <ion-img src="./assets/home/7.jpg" alt="banner"></ion-img>
+      </ion-slide>
+      <ion-slide>
+        <ion-img src="./assets/home/8.jpg" alt="banner"></ion-img>
+      </ion-slide>
+      <ion-slide>
+        <ion-img src="./assets/home/9.jpg" alt="banner"></ion-img>
+      </ion-slide>
+      <ion-slide>
+        <ion-img src="./assets/home/10.jpg" alt="banner"></ion-img>
+      </ion-slide>
+      <ion-slide>
+        <ion-img src="./assets/home/11.jpg" alt="banner"></ion-img>
+      </ion-slide>
+      <ion-slide>
+        <ion-img src="./assets/home/12.jpg" alt="banner"></ion-img>
+      </ion-slide>
+      <ion-slide>
+        <ion-img src="./assets/home/13.jpg" alt="banner"></ion-img>
+      </ion-slide>
+    </ion-slides>
+    <ion-segment [(ngModel)]="segment" scrollable="true">
+      <ion-segment-button value="notification">
+        <ion-label>Notification</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="tenders">
+        <ion-label>Tenders &amp; e procurements</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="news">
+        <ion-label>News &amp; Updated</ion-label>
+      </ion-segment-button>
+    </ion-segment>
+    <div *ngIf="segment == 'notification'">
+      <ion-list>
+        <ion-list-header>
+          ADCET Notifiction
+        </ion-list-header>
+        <ion-item>
+          <ion-label>
+            <h2>ADCET-2020 </h2>
+            <p class="ion-text-wrap"> ADCET -2020 Admissions will be done through counseling, for further details
+              https://sche.ap.gov.in/ADCET/ADCET/ADCET_HomePage.aspx</p>
+          </ion-label>
+        </ion-item>
+      </ion-list>
+      <ion-list>
+        <ion-list-header>
+          Under Graduate Admissions
+        </ion-list-header>
+        <ion-item>
+          <ion-label>
+            <h2>B.Arch Admissions 2020 </h2>
+          </ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label>
+            <h2 class="ion-text-wrap">Bachelor of Fine Arts (BFA) courses and B.Design (Interior Design Admissions
+              through ADCET 2020 </h2>
+          </ion-label>
+        </ion-item>
+      </ion-list>
+      <ion-list>
+        <ion-list-header>
+          Spot Admissions
+        </ion-list-header>
+        <ion-item>
+          <ion-label>
+            <h2 class="ion-text-wrap">B.Tech (Digital Techniques in Design and Planing), B.Tech. (Facilities in Services
+              and Planning), B.Tech. (Town Planning) SPOT Admissions 2020 </h2>
+          </ion-label>
+        </ion-item>
+      </ion-list>
+      <ion-list>
+        <ion-list-header>
+          Post Graduate Admissions
+        </ion-list-header>
+        <ion-item>
+          <ion-label>
+            <h2 class="ion-text-wrap">M.Arch (Arch) Admissions 2020</h2>
+          </ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label>
+            <h2 class="ion-text-wrap">M. Arch (URP) Admissions 2020</h2>
+          </ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label>
+            <h2 class="ion-text-wrap">MFA (Painting) Admission 2020</h2>
+          </ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label>
+            <h2 class="ion-text-wrap">MFA (Applied Arts) Admissions 2020</h2>
+          </ion-label>
+        </ion-item>
+      </ion-list>
+    </div>
+
+    <div *ngIf="segment == 'tenders'">
+      <ion-list>
+        <ion-item>
+          <ion-label>
+            <h2 class="ion-text-wrap">Supply of AIr conditioners, tabs, software's</h2>
+          </ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label>
+            <h2 class="ion-text-wrap">Hiring of buses for University</h2>
+          </ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label>
+            <h2 class="ion-text-wrap">e-Procurement Tender Notification - Supply and Installation of Laboratory
+              Equipments(Painting, Sculpture,Photography, Climatology, Model making), Active Led Display Panels,
+              Led/Laser Projectors, Video Conference systems, Public Address System, 3D Printers & Intercom/ EPABX</h2>
+          </ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label>
+            <h2 class="ion-text-wrap">e-Procurement Tender Notification - Hiring Brand new (52-55) seater buses</h2>
+          </ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label>
+            <h2 class="ion-text-wrap">e-Procurement Tender Notification - Supply and Installation of Laboratory
+              Equipments(Painting, Sculpture,Photography, Material Testing, Surveying, Climatology, Model making,
+              Workshop Departments), Computers/Peripherals, Photocopy Machines, 3D Printers & Intercom/ EPABX</h2>
+          </ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label>
+            <h2 class="ion-text-wrap">e-Procurement Tender Notification - Supply and Installation of (Computers and
+              Peripherals,Photocopy Machine(Xerox),3D Printer, Interactive Panel,Intercom/ EPABX Systems)</h2>
+          </ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label>
+            <h2 class="ion-text-wrap">Mess Catering Services, Supply of Library Books and Laboratory Equipments</h2>
+          </ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label>
+            <h2 class="ion-text-wrap">Supply, Installation & Commissioning of the Desktops</h2>
+          </ion-label>
+        </ion-item>
+      </ion-list>
+    </div>
+
+    <div *ngIf="segment == 'news'">
+      <ion-list>
+        <ion-item>
+          <ion-label>
+            <h2>ADCET-2020</h2>
+          </ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label>
+            <h2>VC's Message about the University in AIR</h2>
+          </ion-label>
+        </ion-item>
+      </ion-list>
+      <ion-list>
+        <ion-list-header>
+          Under Graduate Admissions
+        </ion-list-header>
+        <ion-item>
+          <ion-label>
+            <h2>B'Arch Admissions 2020</h2>
+          </ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label>
+            <h2 class="ion-text-wrap">BFA & B. Design Admissions 2020</h2>
+          </ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label>
+            <h2 class="ion-text-wrap">B. Tech (dtdp), B.tech (FSP) Admissions 2020</h2>
+          </ion-label>
+        </ion-item>
+      </ion-list>
+      <ion-list>
+        <ion-list-header>
+          Post Graduate Admissions
+        </ion-list-header>
+        <ion-item>
+          <ion-label>
+            <h2 class="ion-text-wrap">M.Arch (Arch) Admissions 2020 </h2>
+          </ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label>
+            <h2 class="ion-text-wrap">M. Arch (URP) Admissions 2020 </h2>
+          </ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label>
+            <h2 class="ion-text-wrap">MFA (Painting) Admission 2020</h2>
+          </ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label>
+            <h2 class="ion-text-wrap">MFA (Applied Arts) Admissions 2020 </h2>
+          </ion-label>
+        </ion-item>
+      </ion-list>
+    </div>
   </div>
 </ion-content>

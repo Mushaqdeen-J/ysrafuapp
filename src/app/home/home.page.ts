@@ -6,7 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.page.scss'],
 })
 export class HomePage implements OnInit {
-
+  segment: string = 'notification';
+  slideOpts = {
+    initialSlide: 1,
+    speed: 400,
+    autoplay: {
+      delay: 3000,
+    }
+  };
   constructor() { }
 
   ngOnInit() {
