@@ -1,6 +1,6 @@
 {
-  "appId": "io.ionic.starter",
-  "appName": "ysrafu",
+  "appId": "com.fsi.ysrafu",
+  "appName": "YSRAFU",
   "bundledWebRuntime": false,
   "npmClient": "npm",
   "webDir": "www",
