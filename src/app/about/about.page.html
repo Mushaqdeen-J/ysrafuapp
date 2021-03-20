@@ -15,6 +15,322 @@
   </ion-header>
 
   <div id="container">
-    
+    <ion-segment [(ngModel)]="segment" scrollable="true">
+      <ion-segment-button value="cm">
+        <ion-label>CM's Message</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="university">
+        <ion-label>University</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="vision">
+        <ion-label>Vision &amp; Mission</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="chancellor">
+        <ion-label>Vice-Chancellor's Message</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="school">
+        <ion-label>School of Planning &amp; Architecture</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="college">
+        <ion-label>College of Fine Arts</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="location">
+        <ion-label>Our Location</ion-label>
+      </ion-segment-button>
+    </ion-segment>
+    <div *ngIf="segment == 'cm'">
+      <ion-card>
+        <img src="../assets/about/CM-Message.jpg" alt="cm" />
+      </ion-card>
+    </div>
+    <div *ngIf="segment == 'university'">
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title>UNIVERSITY</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <p>Andhra Pradesh is a fast-growing State in all aspects and is acquiring importance both at National and
+            International level. The fields of Architecture, Engineering, Fine Arts, Management and Pharmacy have become
+            essential for the growth of our country. To meet the need of experienced professionals with practical,
+            creative and real life problem solving skills in art, design and architecture, Dr. YSR Architecture and Fine
+            Arts University is established to offer quality and state-of-the art education.</p>
+          <br />
+          <p>Earlier,Under the special policy of providing a systematic education in Art and Architecture to the present
+            needs of design industry, Jawaharlal Nehru Architecture and Fine Arts University was established under the
+            Act of Andhra Pradesh State Legislature No.31 of 2008 by Late Dr. YS. Rajasekhara Reddy garu Former Chief
+            Minister of Andhra Pradesh. After the separation of Telugu state into two namely Telangana and Andhra
+            Pradesh Prof. D. Vijay Kishore (OSD, Vice-Chancellor I/c), made the proposal of a separate Architecture and
+            Fine Arts University in the state of Andhra Pradesh to the honourable Chief Minister Sri. Y.S. Jagan Mohan
+            Reddy Garu and the State Government. Under the</p>
+          <br />
+          <p>Dynamic leadership of the Chief Minister a new University is established under Sub Section (2) of the
+            Section (1) of the Jawaharlal Nehru Architecture and Fine Arts University (Amendment) Act, 2019 of A.P
+            Legislature Act No.15 of 2020 paving way for Dr. YSR Architecture and Fine Arts University , Kadapa.</p>
+          <br />
+          <p>The University comprises of Ten versatile departments offering Under graduate, Post graduate and research
+            programs in two specialised constituent bodies namely School of Planning and Architecture (SPA) and College
+            of Fine Arts (CFA). Its teaching programs aim to build thoughtful professionals and its research programs
+            deepen the understanding of human settlements.</p>
+          <br />
+          <p>Human habitat and environment being the basic concern of the University, the spectrum of academic
+            programmes is being continuously extended by providing programmes in new fields and emerging areas. The
+            University also undertakes advisory projects to further the goal of making built environment more functional
+            and sustainable. Through its education, research and advisory activities, and improve the impact of habitat
+            professions in enriching the lives of people in A.P's Villages, Towns and Cities.</p>
+        </ion-card-content>
+      </ion-card>
+    </div>
+    <div *ngIf="segment == 'vision'">
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title>VISION</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <ion-list>
+            <ion-item>
+              <ion-avatar slot="start">
+                <ion-icon name="radio-button-on-outline"></ion-icon>
+              </ion-avatar>
+              <ion-label>
+                <h3 class="ion-text-wrap">Imparting Professional Education in the field of Art, Design and Architecture
+                  with best teaching practices and hands on experience with state-of-the art laboratories and facilities
+                  to achieve highest global educational standards.</h3>
+              </ion-label>
+            </ion-item>
+            <ion-item>
+              <ion-avatar slot="start">
+                <ion-icon name="radio-button-on-outline"></ion-icon>
+              </ion-avatar>
+              <ion-label>
+                <h3 class="ion-text-wrap">Creating a transformative educational experience for students focused on deep
+                  core subject knowledge and problem solving skills while developing strong personality development in
+                  leadership, communication, and interpersonal skills.</h3>
+              </ion-label>
+            </ion-item>
+            <ion-item>
+              <ion-avatar slot="start">
+                <ion-icon name="radio-button-on-outline"></ion-icon>
+              </ion-avatar>
+              <ion-label>
+                <h3 class="ion-text-wrap">Bring global exposure to students and scholars by associating with partners
+                  internationally to develop maturity, empathy and integrity to address the problems of this ever
+                  changing world.</h3>
+              </ion-label>
+            </ion-item>
+          </ion-list>
+        </ion-card-content>
+      </ion-card>
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title>MISSION</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <ion-list>
+            <ion-item>
+              <ion-avatar slot="start">
+                <ion-icon name="radio-button-on-outline"></ion-icon>
+              </ion-avatar>
+              <ion-label>
+                <h3 class="ion-text-wrap">Leadership in research and development to develop advanced building
+                  technology, design and exploring new possibilities in fine arts through appropriate utilization and
+                  conservation of natural resources for sustainable development.</h3>
+              </ion-label>
+            </ion-item>
+            <ion-item>
+              <ion-avatar slot="start">
+                <ion-icon name="radio-button-on-outline"></ion-icon>
+              </ion-avatar>
+              <ion-label>
+                <h3 class="ion-text-wrap">To become a landmark in higher education and research University for Art,
+                  Design and Architecture in Andhra Pradesh attaining National and International standards.</h3>
+              </ion-label>
+            </ion-item>
+            <ion-item>
+              <ion-avatar slot="start">
+                <ion-icon name="radio-button-on-outline"></ion-icon>
+              </ion-avatar>
+              <ion-label>
+                <h3 class="ion-text-wrap">Bestowing graduates with quality education conscious of current environmental
+                  crisis and developing personal development skills to be ready for the market with self-confidence,
+                  adaptability, interpersonal skills and work ethic.</h3>
+              </ion-label>
+            </ion-item>
+          </ion-list>
+        </ion-card-content>
+      </ion-card>
+    </div>
+    <div *ngIf="segment == 'chancellor'">
+      <ion-card>
+        <img src="./assets/about/vchanclar.png" alt="" />
+        <ion-card-header>
+          <ion-card-title>VICE-CHANCELLOR'S MESSAGE</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <p>Dr. YSR Architecture and Fine Arts University was founded in January 2020, its academic structure and the
+            laboratories shall be designed to ascertain that it will be acclaimed for its outstanding contribution
+            towards teaching, research and service in shaping this Nation. The University will stand to meet the
+            enormous expectations of the parents towards their wards by nurturing professionals and scholars of high
+            calibre, who can offer solutions to a broad range of issues. This requires excellence in teaching and
+            research on par with the best in the world.</p>
+          <br />
+          <p>We, at the Dr. YSR Architecture and Fine Arts University, continuously aspire to be a breeding ground for
+            positive ideas and emerge as a symbol of openness of thoughts, cultural pluralism and celebrating the unity
+            in the diversity of India. We endeavour to touch the lives of every student by inculcating prudence,
+            efficiency, creativity and compassion to work for the betterment of the marginalized sections of society. We
+            attempt to kindle their sense of - responsibility, honesty, conscience, justice - and above all commitment
+            to human values.</p>
+          <br />
+          <p>Our students will always be the core of our existence as an institution, and we want to give wings to their
+            dreams. We expect them to be passionate about their dreams and make their family and society proud of their
+            achievements. It is crucial for the parents to keep reminding their wards to remain focused on their
+            education and to instil in them a sense of responsibility and care towards the concerns of fellow beings. It
+            will give them strength and motivation to work hard for a greater cause in life.</p>
+          <br />
+          <p><b>Best wishes</b></p>
+          <p><b>Prof. D. Vijay Kishore</b></p>
+          <p><b>OSD and Vice-Chancellor (I/c)</b></p>
+        </ion-card-content>
+      </ion-card>
+    </div>
+    <div *ngIf="segment == 'school'">
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title>SCHOOL OF PLANNING AND ARCHITECTURE</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <p>School of Planning and Architecture encompasses five departments Architecture, Interior design, Digital
+            techniques in design and planning, facilities and services planning and town planning with superior grade of
+            understanding and methodical approach to solve the problems of this generation.</p>
+        </ion-card-content>
+      </ion-card>
+      <ion-card>
+        <img src="./assets/about/spa-abt-1.png" alt="" />
+        <ion-card-content>
+          <p>Students of Architecture are taught to address the complex problems of designing - to house human activity,
+            issues of climate change, energy conservation, technology, structure and combining the needs of internal and
+            external environment with a methodological training in analysis, understanding and problem solving. The
+            course broadens the intellectual and social lives of students beyond the boundaries of architecture and
+            built environment.</p>
+        </ion-card-content>
+      </ion-card>
+      <ion-card>
+        <img src="./assets/about/spa-abt-2.png" alt="" />
+        <ion-card-content>
+          <p>Interior Design Course is designed to develop artistic bent of mind and good imagination for space
+            planning, construction management and effective use of available materials and products. They are taught to
+            create plush, functional and adaptable spaces in various building typologies in an ever evolving and
+            changing world. They are instilled with creativity and problem solving ability while teaching latest
+            material availability, construction techniques and patterns with variety of design workshops such as
+            furniture manufacturing, metal works and lifestyle Accessory Design.</p>
+        </ion-card-content>
+      </ion-card>
+      <ion-card>
+        <img src="./assets/about/spa-abt-3.png" alt="" />
+        <ion-card-content>
+          <p>Digital Techniques in Design and Planning(DTDP) is a multi-disciplinary course, which relates to Design,
+            Multimedia, GIS and IT. The Course structure deals with design and development of the space and built form
+            environment. A strong foundation is imparted into students related to space, design, construction,
+            environment, multimedia, geographical information systems and information technology.</p>
+        </ion-card-content>
+      </ion-card>
+      <ion-card>
+        <img src="./assets/about/spa-abt-4.png" alt="" />
+        <ion-card-content>
+          <p>Students of Facilities and Services Planning(FSP) are taught engineering design, construction procedures,
+            operation, renovation and maintenance of buildings as well as the impact of them on surrounding environment.
+            The course instills knowledge in designing layouts for building services, building commissioning for
+            operation and maintenance, HVAC, Electrical technology, Automation, sustainable energy utility for both
+            residential and commercial buildings.</p>
+        </ion-card-content>
+      </ion-card>
+      <ion-card>
+        <img src="./assets/about/spa-abt-5.png" alt="" />
+        <ion-card-content>
+          <p>The department of Town Planning Students are taught to be both people-oriented and future-oriented
+            combining design, analytical and communication skills. They are nurtured to care about the future and
+            contribute planning solutions to communities with social, economic and environmental problems. The aim is
+            for the student to pursue career in urban and regional planning with knowledge including Sociology,
+            Legislation, Development Theories, Politics, Housing, Transportation, Urban Economics and Landscape.</p>
+        </ion-card-content>
+      </ion-card>
+    </div>
+    <div *ngIf="segment == 'college'">
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title>COLLEGE OF FINE ARTS</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <p>College of Fine arts offers Bachelor of Fine Arts (BFA) degree through five departments namely Painting,
+            Animation, Applied Art, Photography and Sculpture to develop the artistic sense of human to communicate and
+            leave footprints of this generation for the ages to come.</p>
+        </ion-card-content>
+      </ion-card>
+      <ion-card>
+        <img src="./assets/about/cfa-abt-1.png" alt="" />
+        <ion-card-content>
+          <p>The Course of Painting is designed for students to understand the creative use of drawing, oil colour,
+            water colour, ternpera and other media of painting along with figurative and non-figurative compositions.
+            They develop competence in landscape painting, life study, portraiture and mural design in different media.
+          </p>
+        </ion-card-content>
+      </ion-card>
+      <ion-card>
+        <img src="./assets/about/cfa-abt-2.png" alt="" />
+        <ion-card-content>
+          <p>The Animation program enables students to develop core domain areas for animation design and soft skills to
+            experiment with various mediums such as 2D, 3D, VFX, film making, Stop motion animation, etc,. They are
+            introduced to basic drawing and design skills required.</p>
+        </ion-card-content>
+      </ion-card>
+      <ion-card>
+        <img src="./assets/about/cfa-abt-3.png" alt="" />
+        <ion-card-content>
+          <p>The Course structure Applied Art prepares students in creative useof different media for painting and
+            compositional skills with various technical processes of print making such as etching, lithography, wood
+            cutting etc,. to apply their skills in art and craft.</p>
+        </ion-card-content>
+      </ion-card>
+      <ion-card>
+        <img src="./assets/about/cfa-abt-4.png" alt="" />
+        <ion-card-content>
+          <p>The academic programme of Photography and Visual Communications equips students with necessary skills to
+            learn Photography as Fine Art, Photo Journalism, Digital Photography, Audio-Visual Communication, Computer
+            Graphics & Multimedia with videography.</p>
+        </ion-card-content>
+      </ion-card>
+      <ion-card>
+        <img src="./assets/about/cfa-abt-5.png" alt="" />
+        <ion-card-content>
+          <p>The Course Sculpture equips students to understand moulding and casting with various mediums like Clay,
+            Cement, Plaster, Fiber, Bronze, Ceramics, Metal and Wood. They are aquainted to printmaking and painting.
+          </p>
+        </ion-card-content>
+      </ion-card>
+    </div>
+    <div *ngIf="segment == 'location'">
+      <ion-card>
+        <img src="./assets/about/map.png" alt="" />
+        <ion-card-header>
+          <ion-card-title>OUR LOCATION</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <p>This university is located in Kadapa in the state of Andhra Pradesh, India. The Site is Located on a
+            hillock overlooking into 'Penna' river and enclosed between Seshachalam and Nallamalla forest ranges. Being
+            in a natural setup the students are stimulated to get creative thoughts. It is being developed by the State
+            Government, under the ownership and guidance of the Ministry of Education. Construction of a new University
+            takes time and to facilitate education to our students, we are hiring a Transit accommodation to begin the
+            classes from this academic year.</p>
+          <br />
+          <p>Kadapa (known previously as Cuddapah) is a municipal city that lies in the area of Rayalaseema and is
+            located in the south-central region of the southern Indian state of Andhra Pradesh and is located very close
+            to the Penna river. Kadapa is easily accessible by air, train and road. The city has its own domestic
+            airport that is about 8 km from the centre of the city. The railway station at Kadapa lies on the
+            Mumbai-Chennai line and hence, the city receives quite a number of trains at regular intervals. The city is
+            well connected to other cities in the state via a good road transport. You have buses and cabs to take you
+            to Kadapa from Chennai, Bangalore and Hyderabad.The nearest international airport is at Chennai( 258km)
+            /Bangalore(250 km)/Hyderabad(400) which makes the city easily accessible to south Indian Metro cities.</p>
+        </ion-card-content>
+      </ion-card>
+    </div>
   </div>
 </ion-content>
