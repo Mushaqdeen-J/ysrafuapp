@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./admissions.page.scss'],
 })
 export class AdmissionsPage implements OnInit {
-
+  segment:string ='admissions';
   constructor() { }
 
   ngOnInit() {

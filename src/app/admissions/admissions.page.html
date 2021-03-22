@@ -15,6 +15,228 @@
   </ion-header>
 
   <div id="container">
-    
+    <ion-segment [(ngModel)]="segment" scrollable="true">
+      <ion-segment-button value="admissions">
+        <ion-label>Admissions 2020</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="apply">
+        <ion-label>How to Apply</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="eligibility">
+        <ion-label>Eligibility & Course Details</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="faculty">
+        <ion-label>Admission Process</ion-label>
+      </ion-segment-button>
+      <!--<ion-segment-button value="supporting">
+        <ion-label>Self-Supporting Students</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="enterance">
+        <ion-label>Art &amp; Design Common Entrance Test (ADCET-2020)</ion-label>
+      </ion-segment-button>-->
+    </ion-segment>
+    <div *ngIf="segment == 'admissions'">
+      <ion-list>
+        <ion-item>
+          <ion-label>
+            <h2 class="ion-text-wrap">ADCET-2020</h2>
+          </ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label>
+            <h2 class="ion-text-wrap">Bachelor of Technology</h2>
+          </ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label>
+            <h2 class="ion-text-wrap">Bachelor of Architecture</h2>
+          </ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label>
+            <h2 class="ion-text-wrap">Bachelor of Design</h2>
+          </ion-label>
+        </ion-item>
+      </ion-list>
+    </div>
+    <div *ngIf="segment == 'apply'">
+      <p class="ion-padding">The admission procedure will be through the following written examinations for the
+        following courses.</p>
+      <ion-list>
+        <ion-item>
+          <ion-icon name="radio-button-on"></ion-icon>
+          <ion-label>
+            <h3 class="ion-text-wrap">Bachelor of Architecture - National Aptitude Test in Architecture (NATA) conducted
+              by Council of Architecture COA), and as per score in JEE-(mains) Paper-II.</h3>
+          </ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="radio-button-on"></ion-icon>
+          <ion-label>
+            <h3 class="ion-text-wrap">Bachelor of Technology in Digital Techniques in Design and Planning (DTDP),
+              Facilities and Services Planning (FSP) and Planning - AP-EAMCET conducted by Government of Andhra Pradesh.
+            </h3>
+          </ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="radio-button-on"></ion-icon>
+          <ion-label>
+            <h3 class="ion-text-wrap">Bachelor of Fine Arts and Bachelor of Design - Art and Design Common Entrance Test
+              (AD- CET) conducted by Dr. YSR Architecture and Fine Arts University, Kadapa.</h3>
+          </ion-label>
+        </ion-item>
+      </ion-list>
+      <p class="ion-padding">Seats will be allotted as per the merit list in the qualifying examination and as per the
+        government norms for reservation candidates.</p>
+    </div>
+    <div *ngIf="segment == 'eligibility'">
+      <ion-card>
+        <ion-card-content>
+          <table class="table">
+            <tr>
+              <th colspan="6" class="ion-text-center">School of Planning and Architecture</th>
+            </tr>
+            <tr>
+              <th>S.No</th>
+              <th>Department</th>
+              <th>Entrance Exam</th>
+              <th>Intake</th>
+              <th>Course Duration</th>
+              <th>Eligibility</th>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>Bachelor of Architecture (B.Arch)</td>
+              <td>NATA / JEE</td>
+              <td>80</td>
+              <td>5</td>
+              <td>10+2 MPC or 10+3 Diploma</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>Bachelor of Design (B.Des.)</td>
+              <td>ADCET</td>
+              <td>60</td>
+              <td>4</td>
+              <td>10+2 any or 10+3 Diploma</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>Digital Techniques in Design and Planning (DTDP)</td>
+              <td>EAMCET</td>
+              <td>60</td>
+              <td>4</td>
+              <td>10+2 MPC or 10+3 Diploma</td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>Facilities and Services Planning (FSP)</td>
+              <td>EAMCET</td>
+              <td>60</td>
+              <td>4</td>
+              <td>10+2 MPC or 10+3 Diploma</td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td>Bachelor of Planning (B.Plan.)</td>
+              <td>EAMCET</td>
+              <td>40</td>
+              <td>4</td>
+              <td>10+2 MPC or 10+3 Diploma</td>
+            </tr>
+          </table>
+        </ion-card-content>
+      </ion-card>
+      <ion-card>
+        <ion-card-content>
+          <table class="table">
+            <tr>
+              <th colspan="6" class="ion-text-center">College of Fine Arts (Bachelor of Fine Arts)</th>
+            </tr>
+            <tr>
+              <th>S.No</th>
+              <th>Department</th>
+              <th>Entrance Exam</th>
+              <th>Intake</th>
+              <th>Course Duration</th>
+              <th>Eligibility</th>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>Painting</td>
+              <td>ADCET</td>
+              <td>40</td>
+              <td>4</td>
+              <td>10+2 any</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>Animation</td>
+              <td>ADCET</td>
+              <td>60</td>
+              <td>4</td>
+              <td>10+2 any</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>Applied Art</td>
+              <td>ADCET</td>
+              <td>40</td>
+              <td>4</td>
+              <td>10+2 any</td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>Photography</td>
+              <td>ADCET</td>
+              <td>40</td>
+              <td>4</td>
+              <td>10+2 any</td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td>Sculpture</td>
+              <td>ADCET</td>
+              <td>40</td>
+              <td>4</td>
+              <td>10+2 any</td>
+            </tr>
+          </table>
+        </ion-card-content>
+      </ion-card>
+    </div>
+    <div *ngIf="segment == 'faculty'">
+      <ion-card>
+        <ion-card-content>
+          <p>Admissions will be based on the score obtained in the written Entrance Examination followed by verification
+            of qualifying certificates. The final merit list will be prepared on the basis of the final Score/Written
+            Test marks (as applicable).</p>
+          <br />
+          <p>For Fine Arts and Interior Design course, AD-CET results will be declared on APSCHE website after which
+            students can apply for online admission's counselling. Short listed candidates will be sent Admit card and
+            they will need to get Certificates verified and pay the stipulated fee to confirm the admission in the
+            University. Depending on vacancy a second merit list will be prepared and remaining seats will be filled
+            accordingly.</p>
+          <br />
+          <p>For B-Tech courses, AP-EAMCET results will be declared on the State Council of Higher Education website.
+            The students have to attend for online admission conducted by convener AP-EAMCET and select the preferred
+            course. Short listed candidates will be sent Admit card and they will need to get Certificates verified and
+            pay the stipulated fee to confirm the admission in the University. Depending on vacancy a second merit list
+            will be prepared and remaining seats will be filled accordingly.</p>
+          <br />
+          <p>For B.Arch. courses, NATA results will be declared on Council of Architecture's website. The students have
+            to attend for online admission by Convener APSCHE and select the preferred course. (Students who wrote as
+            per score in JEE(main) paper-II.) Short listed candidates will be sent Admit card and they will need to get
+            Certificates verified and pay the stipulated fee to confirm the admission in the University. Depending on
+            vacancy a second merit list will be prepared and remaining seats will be filled accordingly.</p>
+        </ion-card-content>
+      </ion-card>
+    </div>
+    <div *ngIf="segment == 'supporting'">
+      
+    </div>
+    <div *ngIf="segment == 'enterance'">
+      
+    </div>
   </div>
 </ion-content>
