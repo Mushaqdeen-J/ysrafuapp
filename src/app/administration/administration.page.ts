@@ -9,6 +9,7 @@ export class AdministrationPage implements OnInit {
   segment: string = 'organizational';
   chancellor: string = 'professional';
   publication: string = 'journal';
+  registrar: string = 'academic';
   constructor() { }
 
   ngOnInit() {
