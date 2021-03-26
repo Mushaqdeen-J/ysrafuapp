@@ -10,8 +10,8 @@ export class AppComponent {
     { title: 'About', url: '/about', icon: 'accessibility' },
     { title: 'Academics', url: '/academics', icon: 'school' },
     { title: 'Admissions', url: '/admissions', icon: 'walk' },
-    /*{ title: 'Administration', url: '/administration', icon: 'color-palette' },
-    { title: 'Examination', url: '/examination', icon: 'bulb' },
+    { title: 'Administration', url: '/administration', icon: 'color-palette' },
+    /*{ title: 'Examination', url: '/examination', icon: 'bulb' },
     { title: 'Campus Life', url: '/campus', icon: 'bicycle' },
     { title: 'Resources', url: '/resources', icon: 'person' },
     { title: 'ADCET-2020', url: '/adcet', icon: 'newspaper' },*/

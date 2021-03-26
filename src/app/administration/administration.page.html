@@ -15,6 +15,399 @@
   </ion-header>
 
   <div id="container">
-    
+    <ion-segment [(ngModel)]="segment" scrollable="true">
+      <ion-segment-button value="organizational">
+        <ion-label>Organizational Structure</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="chancellor">
+        <ion-label>Vice-Chancellor</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="registrar">
+        <ion-label>Registrar</ion-label>
+      </ion-segment-button>
+      <!--<ion-segment-button value="faculty">
+        <ion-label>SPA Principal</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="supporting">
+        <ion-label>CFA Principal</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="enterance">
+        <ion-label>Executive Council</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="enterance">
+        <ion-label>Board of Studies</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="enterance">
+        <ion-label>Director of Academics & Planning</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="enterance">
+        <ion-label>Industry Consultancy Services Cell (ICS)</ion-label>
+      </ion-segment-button>-->
+    </ion-segment>
+    <div *ngIf="segment == 'organizational'">
+      <ion-card>
+        <img src="./assets/administration/governor.png" />
+        <ion-card-header>
+          <ion-card-subtitle>HON'BLE GOVERNOR</ion-card-subtitle>
+          <ion-card-title>Shri Biswabhusan Harichandan</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <p>Governor his Excellency Mr. Biswabhusan Harichandan is the Chancellor of the University, who is also the
+            Chancellor of all the Government Universities in the state of Andhra Pradesh.</p>
+          <br />
+          <p>Governance of the University will be through Executive Council comprising of the Vice Chancellor,
+            Registrar, and Directors who will meet regularly to take decisions on the functioning of university and
+            setting governing principles. The Executive Council works inclusively with the academic and administrative
+            faculty to discuss and make decisions maintaining accountability and transparency. The Vice Chancellor of
+            the University is the chairperson for the functioning of the university in terms of accountability and
+            upholding the values and principles of Dr. YSR Architecture and Fine Arts University.</p>
+        </ion-card-content>
+      </ion-card>
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title>ORGANIZATIONAL STRUCTURE</ion-card-title>
+        </ion-card-header>
+        <img src="./assets/administration/organizational.png" />
+      </ion-card>
+    </div>
+    <div *ngIf="segment == 'chancellor'">
+      <ion-card>
+        <img src="./assets/administration/vchanclar.png" />
+        <ion-card-header>
+          <ion-card-title>Prof. D. Vijay Kishore</ion-card-title>
+          <ion-card-subtitle>B.Arch(Gold medal), Masters in Urban Planning(SPA, New Delhi), P.hd in Urban
+            Dynamics(Nominated for Prime Ministers Award in Planning),</ion-card-subtitle>
+        </ion-card-header>
+        <ion-card-content>
+          <p>E-mail: vc@ysrafu.ac.in</p>
+          <br />
+          <p>Former Registrar (JNAFA University),</p>
+          <br />
+          <p>Ex Principal, School of Planning & Architecture (JNAFA University)</p>
+        </ion-card-content>
+      </ion-card>
+      <ion-card>
+        <ion-segment [(ngModel)]="publication" scrollable="true" color="danger">
+          <ion-segment-button value="journal">
+            <ion-label>Journals</ion-label>
+          </ion-segment-button>
+          <ion-segment-button value="book">
+            <ion-label>Books</ion-label>
+          </ion-segment-button>
+          <ion-segment-button value="conference">
+            <ion-label>International Conference</ion-label>
+          </ion-segment-button>
+        </ion-segment>
+        <div *ngIf="publication == 'journal'">
+          <table class="table">
+            <tr>
+              <td>Academic Experience</td>
+              <td>28 Years</td>
+            </tr>
+            <tr>
+              <td>Lecturer / Asst.Professor</td>
+              <td>8 Years</td>
+            </tr>
+            <tr>
+              <td>Associate Professor</td>
+              <td>7 Years</td>
+            </tr>
+            <tr>
+              <td>Professor</td>
+              <td>13 Years</td>
+            </tr>
+            <tr>
+              <td>Administrative Experience</td>
+              <td>17 Years</td>
+            </tr>
+          </table>
+          <ion-card-header>
+            <ion-card-title>Registrar</ion-card-title>
+            <ion-card-subtitle>(1st Feb -2010 to 18thFeb-2010)</ion-card-subtitle>
+          </ion-card-header>
+          <ion-card-content>
+            Jawaharlal Nehru Architecture & Fine Arts University, Hyderabad.
+          </ion-card-content>
+          <ion-card-header>
+            <ion-card-title>Principal, School of Planning and Architecture</ion-card-title>
+            <ion-card-subtitle>(Dec-2008 toMar-2017)</ion-card-subtitle>
+          </ion-card-header>
+          <ion-card-content>
+            Jawaharlal Nehru Architecture & Fine Arts University, Hyderabad.
+          </ion-card-content>
+          <ion-card-header>
+            <ion-card-title>Director, School of Planning and Architecture</ion-card-title>
+            <ion-card-subtitle>(Aug-2008 toDec-2008)</ion-card-subtitle>
+          </ion-card-header>
+          <ion-card-content>
+            Jawaharlal Nehru Architecture & Fine Arts University, Hyderabad.
+          </ion-card-content>
+          <ion-card-header>
+            <ion-card-title>Director, School of Planning and Architecture</ion-card-title>
+            <ion-card-subtitle>(May-2007 toAug-2008)</ion-card-subtitle>
+          </ion-card-header>
+          <ion-card-content>
+            Jawaharlal Nehru Technological University, Hyderabad.
+          </ion-card-content>
+          <ion-card-header>
+            <ion-card-title>Head, Dept. of Architecture</ion-card-title>
+            <ion-card-subtitle>(Oct-2002 toMay-2007)</ion-card-subtitle>
+          </ion-card-header>
+          <ion-card-content>
+            Jawaharlal Nehru Technological University, Hyderabad
+          </ion-card-content>
+        </div>
+        <div *ngIf="publication == 'awards'">
+          <ion-list>
+            <ion-item>
+              <ion-icon name="radio-button-on"></ion-icon>
+              <ion-label>
+                <h3 class="ion-text-wrap"><b>'GOLD MEDAL'</b> at B.Arch., level for the outstanding performance in the
+                  area of advance construction subject, sponsored by Hyderabad Industries Limited in the year 1989.</h3>
+              </ion-label>
+            </ion-item>
+            <ion-item>
+              <ion-icon name="radio-button-on"></ion-icon>
+              <ion-label>
+                <h3 class="ion-text-wrap">Coordinator for the Re-habilitation of the land oustees at Penchkalpet ,
+                  Karimnagar, District, Telangana, by the School which was nominated for the <b>'PRIME MINISTER
+                    AWARD'</b> in the area of Urban Planning discipline in the year 1997.</h3>
+              </ion-label>
+            </ion-item>
+            <ion-item>
+              <ion-icon name="radio-button-on"></ion-icon>
+              <ion-label>
+                <h3 class="ion-text-wrap">AndhraPradesh Government has awarded Best Teacherin Architecture Award in 2011
+                  and won Citation from Chief Minister of AndhraPradesh.</h3>
+              </ion-label>
+            </ion-item>
+            <ion-item>
+              <ion-icon name="radio-button-on"></ion-icon>
+              <ion-label>
+                <h3 class="ion-text-wrap">Award of Excellence from Lions Clubs International, Secunderabad for
+                  Outstanding contribution in Architecture.</h3>
+              </ion-label>
+            </ion-item>
+          </ion-list>
+        </div>
+        <div *ngIf="publication == 'studies'">
+          <ion-list>
+            <ion-item>
+              <ion-icon name="radio-button-on"></ion-icon>
+              <ion-label>
+                <h3 class="ion-text-wrap">Chairman, Board of Studies in Interior Design, JNAFAU,Hyderabad.</h3>
+              </ion-label>
+            </ion-item>
+            <ion-item>
+              <ion-icon name="radio-button-on"></ion-icon>
+              <ion-label>
+                <h3 class="ion-text-wrap">Member, Board of Studies, Architecture, Jawaharlal NehruTechnological
+                  University.</h3>
+              </ion-label>
+            </ion-item>
+            <ion-item>
+              <ion-icon name="radio-button-on"></ion-icon>
+              <ion-label>
+                <h3 class="ion-text-wrap">Member, Board of Studies, Planning, Anna University,Chennai.</h3>
+              </ion-label>
+            </ion-item>
+            <ion-item>
+              <ion-icon name="radio-button-on"></ion-icon>
+              <ion-label>
+                <h3 class="ion-text-wrap">Member, Board of Studies, Architecture, Andhra University,Visakhapatnam.</h3>
+              </ion-label>
+            </ion-item>
+            <ion-item>
+              <ion-icon name="radio-button-on"></ion-icon>
+              <ion-label>
+                <h3 class="ion-text-wrap">Member in Doctoral Committee in NagpurUniversity.</h3>
+              </ion-label>
+            </ion-item>
+            <ion-item>
+              <ion-icon name="radio-button-on"></ion-icon>
+              <ion-label>
+                <h3 class="ion-text-wrap">Member in Research Committee in NIT,Nagpur.</h3>
+              </ion-label>
+            </ion-item>
+            <ion-item>
+              <ion-icon name="radio-button-on"></ion-icon>
+              <ion-label>
+                <h3 class="ion-text-wrap">Member in Board of Governor, ITM-School of Architecture Arts and Design (ITM-
+                  SAAD), Vadodara,Gujarat.</h3>
+              </ion-label>
+            </ion-item>
+          </ion-list>
+        </div>
+      </ion-card>
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title>Ph.D. RESEARCH GUIDANCE</ion-card-title>
+          <ion-card-subtitle>No. of Ph.d's Completed - 08</ion-card-subtitle>
+        </ion-card-header>
+        <ion-card-content>
+          <ion-list>
+            <ion-item>
+              <ion-icon name="radio-button-on"></ion-icon>
+              <ion-label>
+                <h3 class="ion-text-wrap">Dr.Binumol Tom title: 'Moisture related decay mitigation in traditional timber
+                  architecture a search into the traditional knowledge base'.</h3>
+              </ion-label>
+            </ion-item>
+            <ion-item>
+              <ion-icon name="radio-button-on"></ion-icon>
+              <ion-label>
+                <h3 class="ion-text-wrap">Dr.BhanuM.Marwahatitle:'Impact of Information and Communication Technologieson
+                  the Physical Planning of UrbanArea'.</h3>
+              </ion-label>
+            </ion-item>
+            <ion-item>
+              <ion-icon name="radio-button-on"></ion-icon>
+              <ion-label>
+                <h3 class="ion-text-wrap">Sri P.Sudhir Kumar title: 'Analyzing for Attributes of Obesogenic Environments
+                  for Design of Healthy Built Environments'.</h3>
+              </ion-label>
+            </ion-item>
+            <ion-item>
+              <ion-icon name="radio-button-on"></ion-icon>
+              <ion-label>
+                <h3 class="ion-text-wrap">Sri G.Viswanadha Kumar title: 'Conception of Heritage Management Plan for
+                  British Colonial Built Heritage in Visakhapatnam City Base on Survey, Assessment and Case Studies'.
+                </h3>
+              </ion-label>
+            </ion-item>
+            <ion-item>
+              <ion-icon name="radio-button-on"></ion-icon>
+              <ion-label>
+                <h3 class="ion-text-wrap">Sri S.M.Subhani title:'Evolvinga model for optimal utilization of financial
+                  resources for development of infrastructure in Urban Local Bodies'.</h3>
+              </ion-label>
+            </ion-item>
+            <ion-item>
+              <ion-icon name="radio-button-on"></ion-icon>
+              <ion-label>
+                <h3 class="ion-text-wrap">Sri Jyotirmoy Sarma title:'Assessment of Need for Private Sector Participation
+                  in Urban Water Supply inIndia'.</h3>
+              </ion-label>
+            </ion-item>
+            <ion-item>
+              <ion-icon name="radio-button-on"></ion-icon>
+              <ion-label>
+                <h3 class="ion-text-wrap">
+                  <p>Bejene Kothri ,Urbanisation trends , special treatment to Hyderabad.</p>
+                  <p>External/Part-timeScholarsregistered-12</p>
+                  <p>Total No. of Ph.D. Scholars: 16No.s</p>
+                </h3>
+              </ion-label>
+            </ion-item>
+          </ion-list>
+        </ion-card-content>
+      </ion-card>
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title>PUBLICATIONS</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+        </ion-card-content>
+        <ion-segment [(ngModel)]="publication" scrollable="true" color="danger">
+          <ion-segment-button value="journal">
+            <ion-label>Journals</ion-label>
+          </ion-segment-button>
+          <ion-segment-button value="book">
+            <ion-label>Books</ion-label>
+          </ion-segment-button>
+          <ion-segment-button value="conference">
+            <ion-label>International Conference</ion-label>
+          </ion-segment-button>
+        </ion-segment>
+        <div *ngIf="publication == 'journal'">
+          <ion-list>
+            <ion-item>
+              <ion-icon name="radio-button-on"></ion-icon>
+              <ion-label>
+                <h3 class="ion-text-wrap">"Community Open Spaces:The nand Now - Acase of an Indian City" paperjointly
+                  authored with Dr.P.Padmavathi and Abhijit Natu, accepted and presented at the Inter national
+                  Conferenceat Malaysia,on 03rd - 04th December 2007 organised by School of Housing Building & Planning
+                  University Sains, Malaysia underway for publicationin: Transforming Urban Spaces in Developing
+                  Worldheld at Penang, Malaysia.</h3>
+              </ion-label>
+            </ion-item>
+          </ion-list>
+        </div>
+        <div *ngIf="publication == 'book'">
+          <ion-list>
+            <ion-item>
+              <ion-icon name="radio-button-on"></ion-icon>
+              <ion-label>
+                <h3 class="ion-text-wrap">Edited and compiled around 20 No. of lecture notes under QIP / Staff
+                  Developing programmes.</h3>
+              </ion-label>
+            </ion-item>
+            <ion-item>
+              <ion-icon name="radio-button-on"></ion-icon>
+              <ion-label>
+                <h3 class="ion-text-wrap">Edited and compiled lecture notes for training under NPCBAERM for practicing
+                  Architects, March2008.</h3>
+              </ion-label>
+            </ion-item>
+            <ion-item>
+              <ion-icon name="radio-button-on"></ion-icon>
+              <ion-label>
+                <h3 class="ion-text-wrap">
+                  <p>Compiled Two Reader Volumes for B.Architecture Courses for the subjects of</p>
+                  <p>1) Town Planning</p>
+                  <p>2) Advanced Building Construction</p>
+                </h3>
+              </ion-label>
+            </ion-item>
+          </ion-list>
+        </div>
+        <div *ngIf="publication == 'conference'">
+          <ion-list>
+            <ion-item>
+              <ion-icon name="radio-button-on"></ion-icon>
+              <ion-label>
+                <h3 class="ion-text-wrap">"Greener environmental approach towards conservation of traditional timber
+                  architecture" jointly authored with Dr.Binumol Tom at International Conference on environment at JNT
+                  University, Hyderabad, A.P. Nov2005</h3>
+              </ion-label>
+            </ion-item>
+            <ion-item>
+              <ion-icon name="radio-button-on"></ion-icon>
+              <ion-label>
+                <h3 class="ion-text-wrap">"Community Open Spaces : The nand Now- Acase of an Indian City" paper jointly
+                  authored with Dr.P.Padmavathi and Abhijit Natu, accepted and presented at the International Conference
+                  at Malaysia,on 03rd-04th December 2007 organised by School of Housing Building& Planning University
+                  Sains, Malaysia under way for publication in: Transforming Urban Spaces in Developing World held at
+                  Penang,Malaysia.</h3>
+              </ion-label>
+            </ion-item>
+            <ion-item>
+              <ion-icon name="radio-button-on"></ion-icon>
+              <ion-label>
+                <h3 class="ion-text-wrap">"Review of Spatial Metamorphosis of Hyderabad" paper accepted at the German -
+                  Indian Workshop titled 'Integration of Sustainable Infrastructure in Spatial Urban, Planning for
+                  Future Megacities in India' University of Karlsruhe, Germany- 08-14 October 2006.</h3>
+              </ion-label>
+            </ion-item>
+            <ion-item>
+              <ion-icon name="radio-button-on"></ion-icon>
+              <ion-label>
+                <h3 class="ion-text-wrap">"Effects of Land-use regulations on middle income housing, case of Hyderabad"
+                  paper presented at 8th International Conference of Safe Affordable and Sustainable Housing,by Centre
+                  for Human Settlements,Jadavpur University, Calcutta,1995.</h3>
+              </ion-label>
+            </ion-item>
+            <ion-item>
+              <ion-icon name="radio-button-on"></ion-icon>
+              <ion-label>
+                <h3 class="ion-text-wrap">"Tourism and Cultural Heritage" paper presented on "Cultural Historic and
+                  natural resources all make up sites for Heritage Tourism" at ICEMESCT-11th International Conference-
+                  18th May, 2015 - Istanbul Turkey.</h3>
+              </ion-label>
+            </ion-item>
+          </ion-list>
+        </div>
+      </ion-card>
+    </div>
   </div>
 </ion-content>
