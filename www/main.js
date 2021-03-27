@@ -64,6 +64,8 @@ let AppComponent = class AppComponent {
             { title: 'Home', url: '/home', icon: 'home' },
             { title: 'About', url: '/about', icon: 'accessibility' },
             { title: 'Academics', url: '/academics', icon: 'school' },
+            { title: 'Admissions', url: '/admissions', icon: 'walk' },
+            { title: 'Administration', url: '/administration', icon: 'color-palette' },
         ];
     }
 };
