@@ -15,6 +15,138 @@
   </ion-header>
 
   <div id="container">
-    
+    <ion-segment [(ngModel)]="segment" scrollable="true">
+      <ion-segment-button value="experience">
+        <ion-label>Campus Experience</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="hostel">
+        <ion-label>Hostel Facilities</ion-label>
+      </ion-segment-button>
+    </ion-segment>
+    <div *ngIf="segment == 'experience'">
+      <ion-grid>
+        <ion-row>
+          <ion-col sizeXl="4" sizeLg="4" sizeMd="6" sizeSm="6" sizeXs="12">
+            <ion-card>
+              <img src="./assets/campus/cl-1.jpg" />
+            </ion-card>
+          </ion-col>
+          <ion-col sizeXl="4" sizeLg="4" sizeMd="6" sizeSm="6" sizeXs="12">
+            <ion-card>
+              <img src="./assets/campus/cl-2.jpg" />
+            </ion-card>
+          </ion-col>
+          <ion-col sizeXl="4" sizeLg="4" sizeMd="6" sizeSm="6" sizeXs="12">
+            <ion-card>
+              <img src="./assets/campus/cl-3.jpg" />
+            </ion-card>
+          </ion-col>
+          <ion-col sizeXl="4" sizeLg="4" sizeMd="6" sizeSm="6" sizeXs="12">
+            <ion-card>
+              <img src="./assets/campus/cl-4.jpg" />
+            </ion-card>
+          </ion-col>
+          <ion-col sizeXl="4" sizeLg="4" sizeMd="6" sizeSm="6" sizeXs="12">
+            <ion-card>
+              <img src="./assets/campus/cl-5.jpg" />
+            </ion-card>
+          </ion-col>
+          <ion-col sizeXl="4" sizeLg="4" sizeMd="6" sizeSm="6" sizeXs="12">
+            <ion-card>
+              <img src="./assets/campus/cl-6.jpg" />
+            </ion-card>
+          </ion-col>
+          <ion-col sizeXl="4" sizeLg="4" sizeMd="6" sizeSm="6" sizeXs="12">
+            <ion-card>
+              <img src="./assets/campus/cl-7.jpg" />
+            </ion-card>
+          </ion-col>
+          <ion-col sizeXl="4" sizeLg="4" sizeMd="6" sizeSm="6" sizeXs="12">
+            <ion-card>
+              <img src="./assets/campus/cl-8.jpg" />
+            </ion-card>
+          </ion-col>
+          <ion-col sizeXl="4" sizeLg="4" sizeMd="6" sizeSm="6" sizeXs="12">
+            <ion-card>
+              <img src="./assets/campus/cl-9.jpg" />
+            </ion-card>
+          </ion-col>
+          <ion-col sizeXl="4" sizeLg="4" sizeMd="6" sizeSm="6" sizeXs="12">
+            <ion-card>
+              <img src="./assets/campus/cl-10.jpg" />
+            </ion-card>
+          </ion-col>
+          <ion-col sizeXl="4" sizeLg="4" sizeMd="6" sizeSm="6" sizeXs="12">
+            <ion-card>
+              <img src="./assets/campus/cl-11.jpg" />
+            </ion-card>
+          </ion-col>
+          <ion-col sizeXl="4" sizeLg="4" sizeMd="6" sizeSm="6" sizeXs="12">
+            <ion-card>
+              <img src="./assets/campus/cl-12.jpg" />
+            </ion-card>
+          </ion-col>
+          <ion-col sizeXl="4" sizeLg="4" sizeMd="6" sizeSm="6" sizeXs="12">
+            <ion-card>
+              <img src="./assets/campus/cl-13.jpg" />
+            </ion-card>
+          </ion-col>
+          <ion-col sizeXl="4" sizeLg="4" sizeMd="6" sizeSm="6" sizeXs="12">
+            <ion-card>
+              <img src="./assets/campus/cl-14.jpg" />
+            </ion-card>
+          </ion-col>
+          <ion-col sizeXl="4" sizeLg="4" sizeMd="6" sizeSm="6" sizeXs="12">
+            <ion-card>
+              <img src="./assets/campus/cl-15.jpg" />
+            </ion-card>
+          </ion-col>
+          <ion-col sizeXl="4" sizeLg="4" sizeMd="6" sizeSm="6" sizeXs="12">
+            <ion-card>
+              <img src="./assets/campus/cl-16.jpg" />
+            </ion-card>
+          </ion-col>
+          <ion-col sizeXl="4" sizeLg="4" sizeMd="6" sizeSm="6" sizeXs="12">
+            <ion-card>
+              <img src="./assets/campus/cl-17.jpg" />
+            </ion-card>
+          </ion-col>
+          <ion-col sizeXl="4" sizeLg="4" sizeMd="6" sizeSm="6" sizeXs="12">
+            <ion-card>
+              <img src="./assets/campus/cl-18.jpg" />
+            </ion-card>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </div>
+    <div *ngIf="segment == 'hostel'">
+      <ion-card>
+        <ion-card-content>
+          <p>
+            Dr. YSR Architecture and Fine Arts University provides residential facilities separately for boys and girls.
+            Most of our students are moving away from home for the first time, so we wanted to provide them comfortable,
+            safe and homely set-up in the campus. All the rooms have been designed to provide adequate moving space and
+            ample air and light.
+          </p>
+          <br />
+          <p>
+            The hostel facility includes a bed and a study table per student. This facility will be on a sharing basis
+            with the fellow students. In order to facilitate comfortable stay for our students, we have decided the
+            sharing capacity to max 3 students for smaller rooms and 4 persons for large rooms. Dining facility will be
+            in the Hostel premises.
+          </p>
+          <br />
+          <p>
+            Hostel facility will be maintained Hygienically, students will be served veg/non- veg food on a weekly
+            basis. Hostel facility will be allotted on first cum first serve basis. Hostel Charges will be Rs.
+            4000/-(approximately) per month inclusive of everything.
+          </p>
+          <br />
+        </ion-card-content>
+        <ion-card-header>
+          <ion-card-title>HOSTEL FACILITY IS AVAILABLE FOR BOYS AND GIRLS(Academic year 2020-2021)</ion-card-title>
+        </ion-card-header>
+      </ion-card>
+    </div>
   </div>
 </ion-content>
